@@ -5,7 +5,7 @@ class RegistersController < ApplicationController
     # GET /registers.json
     def index
         @registers = Register.all.order("date DESC").limit(10)
-        Register.create(:client_ip => request.ip, :date => Time.now)
+        Register.create(:client_ip => request.remote_ip, :date => Time.now)
     end
 
     def convert_time(datetime)
