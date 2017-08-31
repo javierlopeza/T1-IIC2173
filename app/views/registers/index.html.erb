@@ -1,59 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Requests</h1>
-
-<table class="ui celled table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Status</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>No Name Specified</td>
-      <td>Unknown</td>
-      <td class="negative">None</td>
-    </tr>
-    <tr class="positive">
-      <td>Jimmy</td>
-      <td><i class="icon checkmark"></i> Approved</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <td>Jamie</td>
-      <td>Unknown</td>
-      <td class="positive"><i class="icon close"></i> Requires call</td>
-    </tr>
-    <tr class="negative">
-      <td>Jill</td>
-      <td>Unknown</td>
-      <td>None</td>
-    </tr>
-  </tbody>
-</table>
-
+<h1>Últimos 10 Requests</h1>
 <table>
-  <thead>
-    <tr>
-      <th>Timestamp</th>
-      <th>IP Cliente</th>
-      <!-- <th colspan="3"></th> -->
-    </tr>
-  </thead>
+    <thead>
+        <tr>
+            <th>IP Cliente</th>
+            <th>Timestamp</th>
+        </tr>
+    </thead>
 
-  <tbody>
-    <% @registers.each do |register| %>
-      <tr>
-        <td><%= register.date %></td>
-        <td><%= register.client_ip %></td>
-        <!-- <td><%= link_to 'Show', register %></td>
-        <td><%= link_to 'Edit', edit_register_path(register) %></td>
-        <td><%= link_to 'Destroy', register, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
-    <% end %>
-  </tbody>
+    <tbody>
+        <% @registers.each do |register| %>
+        <tr>
+            <td><%= register.client_ip %></td>
+            <td><%= register.date %></td>
+        </tr>
+        <% end %>
+    </tbody>
 </table>
 
-<!-- <%= link_to 'New Register', new_register_path %> -->
+Autor: Javier López A.
+Nº Alumno: 14632128
