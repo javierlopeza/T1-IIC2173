@@ -13,7 +13,7 @@
         <% @registers.each do |register| %>
         <tr>
             <td><%= register.client_ip %></td>
-            <td><%= register.date.in_time_zone("Santiago").strftime("%d/%m/%y: %H:%M:%S %Z") %></td>
+            <td style="padding-left: 30px;"><%= register.date.in_time_zone("Santiago").strftime("%d/%m/%y: %H:%M:%S %Z") %></td>
         </tr>
         <% end %>
     </tbody>
