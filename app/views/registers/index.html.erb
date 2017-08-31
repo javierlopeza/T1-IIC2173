@@ -13,7 +13,7 @@
         <% @registers.each do |register| %>
         <tr>
             <td><%= register.client_ip %></td>
-            <td><%= convert_time(register.date) %></td>
+            <td><%= register.date.strftime("%d/%m/%y: %H:%M:%S %Z") %></td>
         </tr>
         <% end %>
     </tbody>
